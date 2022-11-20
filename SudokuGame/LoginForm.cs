@@ -100,7 +100,8 @@ namespace SudokuGame
 
         private void ButtonTopList_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("未实现。");
+            Form TopListForm = new TopListForm();
+            TopListForm.ShowDialog();
         }
     }
 }

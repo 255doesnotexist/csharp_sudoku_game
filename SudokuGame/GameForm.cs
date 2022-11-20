@@ -214,6 +214,11 @@ namespace SudokuGame
             UpdateSudokuButtons();
         }
 
+        private void GameForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            sudoku.SaveSudokuFile(SaveGamePath);
+        }
+
         private void TickTimer_Tick(object sender, EventArgs e)
         {
             EndTime = DateTime.Now;
@@ -228,12 +233,14 @@ namespace SudokuGame
                 if (sudoku.ShortestTime > sudoku.GameTime)
                 {
                     sudoku.ShortestTime = sudoku.GameTime;
+                    sudoku.RecordUser = user.Name;
                 }
                 MessageBox.Show(string.Format("您赢了！\n\n耗时: {0}\n史上最佳：{1}",
                     sudoku.GameTime.ToString(@"hh\ \时\ mm\ \分\ ss\ \秒"),
                     sudoku.ShortestTime.ToString(@"hh\ \时\ mm\ \分\ ss\ \秒")));
                 this.Close();
                 sudoku.GameTime = TimeSpan.Zero;
+                sudoku.SaveSudokuFile(SaveGamePath);
             }
         }
     }

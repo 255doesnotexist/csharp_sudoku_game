@@ -11,6 +11,7 @@ namespace SudokuGame
     {
         public string Name { get; set; }
         public bool IsLastArcadeMode = false;
+        private string LastGamePath = "";
         public User()
         {
         }
@@ -19,10 +20,13 @@ namespace SudokuGame
         {
             Name = name;
         }
-
+        public string ArcadeGameSavePath(int x)
+        {
+            return string.Format("{0}.{1}.arcade.sudoku", Name, x);
+        }
         public string LastArcadeGameSavePath()
         {
-            return Name + ".arcade.sudoku";
+            return LastGamePath;
         }
 
         public void SaveUserFile() // 把当前用户保存到文件
@@ -31,6 +35,7 @@ namespace SudokuGame
             StreamWriter sw = new StreamWriter(Path);
             sw.WriteLine("{0}", Name);
             sw.WriteLine("{0}", IsLastArcadeMode);
+            sw.WriteLine("{0}", LastArcadeGameSavePath());
             sw.Close();
         }
         public void ReadUserFile() // 读取文件到当前用户
@@ -39,6 +44,7 @@ namespace SudokuGame
             StreamReader rw = new StreamReader(Path);
             Name = rw.ReadLine();
             IsLastArcadeMode = bool.Parse(rw.ReadLine());
+            LastGamePath = rw.ReadLine();
             rw.Close();
         }
     }

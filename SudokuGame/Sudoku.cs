@@ -11,6 +11,7 @@ namespace SudokuGame
 
         public TimeSpan GameTime = TimeSpan.Zero;
         public TimeSpan ShortestTime = TimeSpan.MaxValue;
+        public string RecordUser = "NO NAME";
         protected int[,] SudokuData = new int[10, 10];
         public bool[,] Writable = new bool[10, 10];
 
@@ -90,6 +91,7 @@ namespace SudokuGame
             }
             sw.WriteLine(GameTime.ToString());
             sw.WriteLine(ShortestTime.ToString());
+            sw.WriteLine("{0}",RecordUser);
             sw.Close();
         }
         public void ReadSudokuFile(string Path) // 读取文件到当前数独
@@ -113,6 +115,7 @@ namespace SudokuGame
             }
             GameTime = TimeSpan.Parse(rw.ReadLine());
             ShortestTime = TimeSpan.Parse(rw.ReadLine());
+            RecordUser = rw.ReadLine();
             rw.Close();
         }
         

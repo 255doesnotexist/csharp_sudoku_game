@@ -73,6 +73,12 @@
       <DependentUpon>SelectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sudoku.cs" />
+    <Compile Include="TopListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopListForm.Designer.cs">
+      <DependentUpon>TopListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="CustomizeForm.resx">
       <DependentUpon>CustomizeForm.cs</DependentUpon>
@@ -94,6 +100,9 @@
     </Compile>
     <EmbeddedResource Include="SelectForm.resx">
       <DependentUpon>SelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopListForm.resx">
+      <DependentUpon>TopListForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

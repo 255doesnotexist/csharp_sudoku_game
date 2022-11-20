@@ -36,7 +36,7 @@ namespace SudokuGame
         private void ButtonOnClick(object sender, EventArgs e)
         {
             Sudoku sudoku = new Sudoku(sudokuStrings[int.Parse(((Button)sender).Name)]);
-            Form GmForm = new GameForm(sudoku, user, false, user.LastArcadeGameSavePath());
+            Form GmForm = new GameForm(sudoku, user, false, user.ArcadeGameSavePath(int.Parse(((Button)sender).Text)));
             GmForm.ShowDialog();
         }
         private void SelectForm_Load(object sender, EventArgs e)
