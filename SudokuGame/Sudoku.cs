@@ -12,6 +12,22 @@ namespace SudokuGame
             "560847000309000600008000000010080040790602018050030090000000200006000807000316059001000111010111011110111111101101101001010100101101101111111011110111010111000100";
         protected int[,] SudokuData = new int[10, 10];
         public bool[,] Writable = new bool[10, 10];
+        public int Count
+        {
+            get
+            {
+                int cnt = 0;
+                for (int i = 1; i <= 9; ++i)
+                {
+                    for (int j = 1; j <= 9; ++j)
+                    {
+                        if (SudokuData[i,j] != 0) ++cnt;
+                    }
+                }
+
+                return cnt;
+            }
+        }
 
         // 实现一个索引器，允许外部访问内部数独数据
         public int this[int i, int j]
