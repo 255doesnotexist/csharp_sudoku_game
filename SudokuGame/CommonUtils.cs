@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace SudokuGame
@@ -105,6 +106,36 @@ namespace SudokuGame
 
                 sudoku = InternalGenerateSudoku(1, 1, sudoku, IntMap);
                 // 然后调用DFS进行求解
+            }
+
+            return sudoku;
+        }
+        public static Sudoku GenerateSudoku(int WithNElements)
+        {
+            Sudoku sudoku = GenerateValidSudoku();
+            int CountNeedToDelete = 81 - WithNElements;
+            if (CountNeedToDelete >= 0)
+            {
+                Random rn = new Random();
+                List<Tuple<int, int>> ListCoordinate = new List<Tuple<int, int>>();
+                for (int i = 1; i <= 9; ++i)
+                {
+                    for (int j = 1; j <= 9; ++j)
+                    {
+                        ListCoordinate.Add(new Tuple<int, int>(i,j));
+                    }
+                }
+                while (CountNeedToDelete > 0)
+                {
+                    int id = rn.Next(0, ListCoordinate.Count);
+                    sudoku[ListCoordinate[id].Item1, ListCoordinate[id].Item2] = 0;
+                    ListCoordinate.Remove(ListCoordinate[id]);
+                    --CountNeedToDelete;
+                }
+            }
+            else
+            {
+                throw new Exception("无法生成合法数独。");
             }
 
             return sudoku;

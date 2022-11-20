@@ -8,10 +8,33 @@ namespace SudokuGame
 {
     public class Sudoku
     {
-        public const string DefaultSudoku =
-            "560847000309000600008000000010080040790602018050030090000000200006000807000316059001000111010111011110111111101101101001010100101101101111111011110111010111000100";
+
+        public TimeSpan GameTime = TimeSpan.Zero;
+        public TimeSpan ShortestTime = TimeSpan.MaxValue;
         protected int[,] SudokuData = new int[10, 10];
         public bool[,] Writable = new bool[10, 10];
+
+        public Sudoku(){}
+
+        public Sudoku(string InitString)
+        { // 从字符串反序列化一个数独
+            int i = 1, j = 1;
+            for (int t = 0; t < InitString.Length; ++t)
+            {
+                SudokuData[i, j] = InitString[t] - '0';
+                ++j;
+                if (j == 10)
+                {
+                    j = 1;
+                    ++i;
+                }
+
+                if (i == 10)
+                {
+                    break;
+                }
+            }
+        }
         public int Count
         {
             get
@@ -65,6 +88,8 @@ namespace SudokuGame
                     sw.Write(val.ToString());
                 }
             }
+            sw.WriteLine(GameTime.ToString());
+            sw.WriteLine(ShortestTime.ToString());
             sw.Close();
         }
         public void ReadSudokuFile(string Path) // 读取文件到当前数独
@@ -86,15 +111,11 @@ namespace SudokuGame
                     Writable[i, j] = (rw.Read() - '0' == 1);
                 }
             }
+            GameTime = TimeSpan.Parse(rw.ReadLine());
+            ShortestTime = TimeSpan.Parse(rw.ReadLine());
             rw.Close();
         }
-
-        public void WriteDefaultSudokuFile()
-        {
-            StreamWriter sw = new StreamWriter("default.sudoku");
-            sw.WriteLine(DefaultSudoku);
-            sw.Close();
-        }
+        
         public int[,] GetSmallSquare(int line, int row) 
         { // 返回大数独中的小方格
             int[,] Result = new int[4, 4];

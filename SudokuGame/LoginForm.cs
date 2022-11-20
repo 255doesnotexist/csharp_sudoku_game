@@ -59,24 +59,32 @@ namespace SudokuGame
             User user = new User(ListUsers.SelectedItem.ToString());
             user.ReadUserFile();
             Form GmForm = new Form();
-            if (File.Exists(user.LastGameSavePath()) && MessageBox.Show("是否读取上次存档？","提示",MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Sudoku sudoku = new Sudoku();
-                sudoku.ReadSudokuFile(user.LastGameSavePath());
-                GmForm = new GameForm(sudoku, user, CbEditorMode.Checked);
+            if (RbArcadeMode.Checked)
+            { // 若存在上次闯关模式记录
+                if (File.Exists(user.LastArcadeGameSavePath()) && user.IsLastArcadeMode)
+                {
+                    Sudoku sudoku = new Sudoku();
+                    sudoku.ReadSudokuFile(user.LastArcadeGameSavePath());
+                    if (sudoku.Count < 81 && MessageBox.Show("是否读取上次闯关模式存档？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        GmForm = new GameForm(sudoku, user, false, user.LastArcadeGameSavePath());
+                    }
+                    else
+                    {
+                        GmForm = new SelectForm(user);
+                    }
+                }
+
+                user.IsLastArcadeMode = true;
             }
-            else if(CbEditorMode.Checked) // 创意工坊自由模式
+            else if (RbCustomMode.Checked)
+            {
+                GmForm = new CustomizeForm(user);
+            }
+            else if(RbEditMode.Checked) // 创意工坊自由模式
             {
                 MessageBox.Show("检测到您勾选了编辑模式，即将进入自制数独模式。\n您可以通过右下角的另存数独功能保存您制作的数独谜题，可用于上传至互联网与他人分享。");
-                GmForm = new GameForm(new Sudoku(), user, CbEditorMode.Checked);
-            }
-            else
-            {
-                MessageBox.Show("即将加载系统内置数独谜题。");
-                Sudoku sudoku = new Sudoku();
-                sudoku.WriteDefaultSudokuFile();
-                sudoku.ReadSudokuFile("default.sudoku");
-                GmForm = new GameForm(sudoku, user, CbEditorMode.Checked);
+                GmForm = new GameForm(new Sudoku(), user, true, user.Name + ".editmode.sudoku");
             }
             GmForm.ShowDialog();
         }
@@ -84,6 +92,11 @@ namespace SudokuGame
         private void LoginForm_Load(object sender, EventArgs e)
         {
             RefreshUsers();
+        }
+
+        private void ButtonTopList_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("未实现。");
         }
     }
 }

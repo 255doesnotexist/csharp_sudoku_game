@@ -18,15 +18,17 @@ namespace SudokuGame
         private Sudoku sudoku = new Sudoku();
         private bool EditorMode = false;
         private string Gamemode = "解题模式";
+        private string SaveGamePath = "";
         private User user;
         private DateTime BeginTime = new DateTime(), EndTime = new DateTime();
         private TimeSpan LastTimeSpan = new TimeSpan();
-        public GameForm(Sudoku InitSudoku, User InitUser, bool InitEditorMode)
+        public GameForm(Sudoku InitSudoku, User InitUser, bool InitEditorMode, string initSaveGamePath)
         {
             InitializeComponent();
             sudoku = InitSudoku;
             EditorMode = InitEditorMode;
             user = InitUser;
+            SaveGamePath = initSaveGamePath;
         }
 
         private void UpdateSudokuButtons()
@@ -53,7 +55,7 @@ namespace SudokuGame
                 }
             }
 
-            LabelMysteryRemains.Text = string.Format("您距离胜利还有还有 {0} 个格子未填！", FilledCount);
+            LabelMysteryRemains.Text = string.Format("您距离胜利还有还有 {0} 个格子未填！", 81 - FilledCount);
         }
         private void SudokuButtonOnClick(object sender, int i, int j)
         {
@@ -114,7 +116,7 @@ namespace SudokuGame
 
                 UpdateSudokuButtons();
             }
-            sudoku.SaveSudokuFile(user.LastGameSavePath());
+            sudoku.SaveSudokuFile(SaveGamePath);
         }
         private void FormMain_Load(object sender, EventArgs e)
         {
@@ -171,7 +173,7 @@ namespace SudokuGame
             UpdateSudokuButtons(); // 首次初始化数独界面
             this.Text += "\t当前登入用户：" + user.Name;
             BeginTime = DateTime.Now; // 记录进入时间
-            LastTimeSpan = user.GameTime; // 从上次的游戏时间继续开始计时
+            LastTimeSpan = sudoku.GameTime; // 从上次的游戏时间继续开始计时
         }
 
         private void RbSolve_CheckedChanged(object sender, EventArgs e)
@@ -215,10 +217,24 @@ namespace SudokuGame
         private void TickTimer_Tick(object sender, EventArgs e)
         {
             EndTime = DateTime.Now;
-            user.GameTime = EndTime - BeginTime + LastTimeSpan;
+            sudoku.GameTime = EndTime - BeginTime + LastTimeSpan;
             user.SaveUserFile();
 
-            LabelTimer.Text = "您已经花了 " + user.GameTime.ToString(@"hh\ \时\ mm\ \分\ ss\ \秒") + "来解题了。";
+            LabelTimer.Text = "您已经花了 " + sudoku.GameTime.ToString(@"hh\ \时\ mm\ \分\ ss\ \秒") + "来解题了。";
+
+            if (sudoku.Count == 81)
+            {
+                TickTimer.Enabled = false;
+                if (sudoku.ShortestTime > sudoku.GameTime)
+                {
+                    sudoku.ShortestTime = sudoku.GameTime;
+                }
+                MessageBox.Show(string.Format("您赢了！\n\n耗时: {0}\n史上最佳：{1}",
+                    sudoku.GameTime.ToString(@"hh\ \时\ mm\ \分\ ss\ \秒"),
+                    sudoku.ShortestTime.ToString(@"hh\ \时\ mm\ \分\ ss\ \秒")));
+                this.Close();
+                sudoku.GameTime = TimeSpan.Zero;
+            }
         }
     }
 }

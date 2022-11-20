@@ -33,7 +33,10 @@
             this.FlLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.ButtonLogin = new System.Windows.Forms.Button();
             this.ButtonRegister = new System.Windows.Forms.Button();
-            this.CbEditorMode = new System.Windows.Forms.CheckBox();
+            this.RbArcadeMode = new System.Windows.Forms.RadioButton();
+            this.RbCustomMode = new System.Windows.Forms.RadioButton();
+            this.RbEditMode = new System.Windows.Forms.RadioButton();
+            this.ButtonTopList = new System.Windows.Forms.Button();
             this.TbLoginLayout.SuspendLayout();
             this.FlLayout.SuspendLayout();
             this.SuspendLayout();
@@ -42,44 +45,51 @@
             // 
             this.TbLoginLayout.ColumnCount = 2;
             this.TbLoginLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TbLoginLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.TbLoginLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.TbLoginLayout.Controls.Add(this.ListUsers, 0, 0);
             this.TbLoginLayout.Controls.Add(this.FlLayout, 1, 0);
             this.TbLoginLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TbLoginLayout.Location = new System.Drawing.Point(0, 0);
+            this.TbLoginLayout.Margin = new System.Windows.Forms.Padding(2);
             this.TbLoginLayout.Name = "TbLoginLayout";
             this.TbLoginLayout.RowCount = 1;
             this.TbLoginLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TbLoginLayout.Size = new System.Drawing.Size(647, 457);
+            this.TbLoginLayout.Size = new System.Drawing.Size(324, 228);
             this.TbLoginLayout.TabIndex = 1;
             // 
             // ListUsers
             // 
             this.ListUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListUsers.FormattingEnabled = true;
-            this.ListUsers.ItemHeight = 24;
-            this.ListUsers.Location = new System.Drawing.Point(3, 3);
+            this.ListUsers.ItemHeight = 12;
+            this.ListUsers.Location = new System.Drawing.Point(2, 2);
+            this.ListUsers.Margin = new System.Windows.Forms.Padding(2);
             this.ListUsers.Name = "ListUsers";
-            this.ListUsers.Size = new System.Drawing.Size(441, 451);
+            this.ListUsers.Size = new System.Drawing.Size(220, 224);
             this.ListUsers.TabIndex = 2;
             // 
             // FlLayout
             // 
             this.FlLayout.Controls.Add(this.ButtonLogin);
             this.FlLayout.Controls.Add(this.ButtonRegister);
-            this.FlLayout.Controls.Add(this.CbEditorMode);
+            this.FlLayout.Controls.Add(this.ButtonTopList);
+            this.FlLayout.Controls.Add(this.RbArcadeMode);
+            this.FlLayout.Controls.Add(this.RbCustomMode);
+            this.FlLayout.Controls.Add(this.RbEditMode);
             this.FlLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlLayout.Location = new System.Drawing.Point(450, 3);
+            this.FlLayout.Location = new System.Drawing.Point(226, 2);
+            this.FlLayout.Margin = new System.Windows.Forms.Padding(2);
             this.FlLayout.Name = "FlLayout";
-            this.FlLayout.Size = new System.Drawing.Size(194, 451);
+            this.FlLayout.Size = new System.Drawing.Size(96, 224);
             this.FlLayout.TabIndex = 3;
             // 
             // ButtonLogin
             // 
             this.ButtonLogin.AutoSize = true;
-            this.ButtonLogin.Location = new System.Drawing.Point(3, 3);
+            this.ButtonLogin.Location = new System.Drawing.Point(2, 2);
+            this.ButtonLogin.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonLogin.Name = "ButtonLogin";
-            this.ButtonLogin.Size = new System.Drawing.Size(180, 80);
+            this.ButtonLogin.Size = new System.Drawing.Size(90, 40);
             this.ButtonLogin.TabIndex = 0;
             this.ButtonLogin.Text = "用户登录";
             this.ButtonLogin.UseVisualStyleBackColor = true;
@@ -88,32 +98,66 @@
             // ButtonRegister
             // 
             this.ButtonRegister.AutoSize = true;
-            this.ButtonRegister.Location = new System.Drawing.Point(3, 89);
+            this.ButtonRegister.Location = new System.Drawing.Point(2, 46);
+            this.ButtonRegister.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonRegister.Name = "ButtonRegister";
-            this.ButtonRegister.Size = new System.Drawing.Size(180, 80);
+            this.ButtonRegister.Size = new System.Drawing.Size(90, 40);
             this.ButtonRegister.TabIndex = 1;
             this.ButtonRegister.Text = "新建用户";
             this.ButtonRegister.UseVisualStyleBackColor = true;
             this.ButtonRegister.Click += new System.EventHandler(this.ButtonRegister_Click);
             // 
-            // CbEditorMode
+            // RbArcadeMode
             // 
-            this.CbEditorMode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CbEditorMode.AutoSize = true;
-            this.CbEditorMode.Location = new System.Drawing.Point(3, 175);
-            this.CbEditorMode.Name = "CbEditorMode";
-            this.CbEditorMode.Size = new System.Drawing.Size(138, 28);
-            this.CbEditorMode.TabIndex = 2;
-            this.CbEditorMode.Text = "编辑模式";
-            this.CbEditorMode.UseVisualStyleBackColor = true;
+            this.RbArcadeMode.AutoSize = true;
+            this.RbArcadeMode.Checked = true;
+            this.RbArcadeMode.Location = new System.Drawing.Point(3, 135);
+            this.RbArcadeMode.Name = "RbArcadeMode";
+            this.RbArcadeMode.Size = new System.Drawing.Size(71, 16);
+            this.RbArcadeMode.TabIndex = 3;
+            this.RbArcadeMode.TabStop = true;
+            this.RbArcadeMode.Text = "闯关模式";
+            this.RbArcadeMode.UseVisualStyleBackColor = true;
+            // 
+            // RbCustomMode
+            // 
+            this.RbCustomMode.AutoSize = true;
+            this.RbCustomMode.Location = new System.Drawing.Point(3, 157);
+            this.RbCustomMode.Name = "RbCustomMode";
+            this.RbCustomMode.Size = new System.Drawing.Size(83, 16);
+            this.RbCustomMode.TabIndex = 4;
+            this.RbCustomMode.Text = "自定义模式";
+            this.RbCustomMode.UseVisualStyleBackColor = true;
+            // 
+            // RbEditMode
+            // 
+            this.RbEditMode.AutoSize = true;
+            this.RbEditMode.Location = new System.Drawing.Point(3, 179);
+            this.RbEditMode.Name = "RbEditMode";
+            this.RbEditMode.Size = new System.Drawing.Size(71, 16);
+            this.RbEditMode.TabIndex = 5;
+            this.RbEditMode.Text = "编辑模式";
+            this.RbEditMode.UseVisualStyleBackColor = true;
+            // 
+            // ButtonTopList
+            // 
+            this.ButtonTopList.AutoSize = true;
+            this.ButtonTopList.Location = new System.Drawing.Point(2, 90);
+            this.ButtonTopList.Margin = new System.Windows.Forms.Padding(2);
+            this.ButtonTopList.Name = "ButtonTopList";
+            this.ButtonTopList.Size = new System.Drawing.Size(90, 40);
+            this.ButtonTopList.TabIndex = 6;
+            this.ButtonTopList.Text = "排行榜";
+            this.ButtonTopList.UseVisualStyleBackColor = true;
+            this.ButtonTopList.Click += new System.EventHandler(this.ButtonTopList_Click);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 457);
+            this.ClientSize = new System.Drawing.Size(324, 228);
             this.Controls.Add(this.TbLoginLayout);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.Text = "数独谜题 - 用户登录";
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -131,6 +175,9 @@
         private System.Windows.Forms.FlowLayoutPanel FlLayout;
         private System.Windows.Forms.Button ButtonLogin;
         private System.Windows.Forms.Button ButtonRegister;
-        private System.Windows.Forms.CheckBox CbEditorMode;
+        private System.Windows.Forms.RadioButton RbArcadeMode;
+        private System.Windows.Forms.RadioButton RbCustomMode;
+        private System.Windows.Forms.RadioButton RbEditMode;
+        private System.Windows.Forms.Button ButtonTopList;
     }
 }
