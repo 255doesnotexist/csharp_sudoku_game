@@ -45,16 +45,17 @@
             this.TbLayoutSelect.RowCount = 2;
             this.TbLayoutSelect.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TbLayoutSelect.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TbLayoutSelect.Size = new System.Drawing.Size(316, 117);
+            this.TbLayoutSelect.Size = new System.Drawing.Size(316, 123);
             this.TbLayoutSelect.TabIndex = 0;
             // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(316, 117);
+            this.ClientSize = new System.Drawing.Size(316, 123);
             this.Controls.Add(this.TbLayoutSelect);
             this.Name = "SelectForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "选择关卡（越往后越难）";
             this.Load += new System.EventHandler(this.SelectForm_Load);
             this.ResumeLayout(false);

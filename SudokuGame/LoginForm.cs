@@ -61,7 +61,7 @@ namespace SudokuGame
             Form GmForm = new Form();
             if (RbArcadeMode.Checked)
             { // 若存在上次闯关模式记录
-                if (File.Exists(user.LastArcadeGameSavePath()) && user.IsLastArcadeMode)
+                if (File.Exists(user.LastArcadeGameSavePath()))
                 {
                     Sudoku sudoku = new Sudoku();
                     sudoku.ReadSudokuFile(user.LastArcadeGameSavePath());
@@ -73,6 +73,10 @@ namespace SudokuGame
                     {
                         GmForm = new SelectForm(user);
                     }
+                }
+                else
+                {
+                    GmForm = new SelectForm(user);
                 }
 
                 user.IsLastArcadeMode = true;

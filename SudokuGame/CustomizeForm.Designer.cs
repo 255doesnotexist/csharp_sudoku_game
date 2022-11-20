@@ -94,6 +94,7 @@
             this.ClientSize = new System.Drawing.Size(411, 58);
             this.Controls.Add(this.TbLayoutMain);
             this.Name = "CustomizeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "请选择你需要生成差几步完成的数独";
             this.TbLayoutMain.ResumeLayout(false);
             this.TbLayoutMain.PerformLayout();

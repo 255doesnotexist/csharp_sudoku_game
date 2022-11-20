@@ -142,6 +142,7 @@
             // ButtonTopList
             // 
             this.ButtonTopList.AutoSize = true;
+            this.FlLayout.SetFlowBreak(this.ButtonTopList, true);
             this.ButtonTopList.Location = new System.Drawing.Point(2, 90);
             this.ButtonTopList.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonTopList.Name = "ButtonTopList";
@@ -159,6 +160,8 @@
             this.Controls.Add(this.TbLoginLayout);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
+            this.Opacity = 0.95D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "数独谜题 - 用户登录";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.TbLoginLayout.ResumeLayout(false);

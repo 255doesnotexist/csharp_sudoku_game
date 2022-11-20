@@ -260,6 +260,7 @@
             this.Controls.Add(this.TbLayoutMain);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "数独游戏 by255";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.TbLayoutMain.ResumeLayout(false);
