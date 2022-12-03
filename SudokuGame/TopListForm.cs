@@ -20,7 +20,7 @@ namespace SudokuGame
         private void TopListForm_Load(object sender, EventArgs e)
         {
             LabelTopList.Text = "当前闯关模式的最佳记录如下：\n";
-            FileInfo[] fn = new DirectoryInfo(Application.StartupPath).GetFiles();
+            FileInfo[] fn = new DirectoryInfo("./").GetFiles();
             string[] path = new string[11];
             for (int i = 0; i <= 10; ++i)
             {

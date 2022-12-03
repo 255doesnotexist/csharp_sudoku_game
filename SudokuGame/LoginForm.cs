@@ -20,9 +20,9 @@ namespace SudokuGame
 
         private void RefreshUsers()
         {
-            DirectoryInfo di = new DirectoryInfo(Application.StartupPath);
-            FileInfo[]  fi = di.GetFiles("*.user");
             ListUsers.Items.Clear();
+            DirectoryInfo di = new DirectoryInfo("./");
+            FileInfo[] fi = di.GetFiles("*.user");
             foreach (var i in fi)
             {
                 string username = i.Name.Substring(0, i.Name.Length - ".user".Length);

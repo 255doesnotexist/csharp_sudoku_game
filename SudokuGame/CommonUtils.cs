@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -138,6 +139,25 @@ namespace SudokuGame
                 throw new Exception("无法生成合法数独。");
             }
 
+            return sudoku;
+        }
+
+        public static Sudoku SolveSudoku(Sudoku sudoku)
+        {
+            int[] IntMap = new int[10];
+            for (int i = 0; i < 10; ++i)
+            {
+                IntMap[i] = i;
+            }
+
+            for (int i = 1; i <= 9; ++i)
+            {
+                for (int j = 1; j <= 9; ++j)
+                {
+                    sudoku.Writable[i, j] = (sudoku.Writable[i, j] || sudoku[i, j] == 0);
+                }
+            }
+            sudoku = InternalGenerateSudoku(1, 1, sudoku, IntMap);
             return sudoku;
         }
     }

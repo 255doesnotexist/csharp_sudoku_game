@@ -32,20 +32,23 @@
             this.TbLayoutMain = new System.Windows.Forms.TableLayoutPanel();
             this.TbLayoutSudoku = new System.Windows.Forms.TableLayoutPanel();
             this.GbSolveOrHint = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tbLayoutActionMode = new System.Windows.Forms.TableLayoutPanel();
             this.RbEdit = new System.Windows.Forms.RadioButton();
             this.RbSolve = new System.Windows.Forms.RadioButton();
             this.RbHint = new System.Windows.Forms.RadioButton();
             this.TbForButtons = new System.Windows.Forms.TableLayoutPanel();
-            this.ButtonOpenSudoku = new System.Windows.Forms.Button();
-            this.ButtonSaveSudoku = new System.Windows.Forms.Button();
             this.LabelMysteryRemains = new System.Windows.Forms.Label();
             this.LabelTimer = new System.Windows.Forms.Label();
             this.TickTimer = new System.Windows.Forms.Timer(this.components);
+            this.tbLayoutButton = new System.Windows.Forms.TableLayoutPanel();
+            this.ButtonOpenSudoku = new System.Windows.Forms.Button();
+            this.ButtonSaveSudoku = new System.Windows.Forms.Button();
+            this.ButtonSolveSudoku = new System.Windows.Forms.Button();
             this.TbLayoutMain.SuspendLayout();
             this.GbSolveOrHint.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tbLayoutActionMode.SuspendLayout();
             this.TbForButtons.SuspendLayout();
+            this.tbLayoutButton.SuspendLayout();
             this.SuspendLayout();
             // 
             // TbLayoutMain
@@ -58,7 +61,7 @@
             this.TbLayoutMain.Controls.Add(this.TbForButtons, 1, 1);
             this.TbLayoutMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TbLayoutMain.Location = new System.Drawing.Point(0, 0);
-            this.TbLayoutMain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TbLayoutMain.Margin = new System.Windows.Forms.Padding(4);
             this.TbLayoutMain.Name = "TbLayoutMain";
             this.TbLayoutMain.RowCount = 2;
             this.TbLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
@@ -82,7 +85,7 @@
             this.TbLayoutSudoku.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TbLayoutSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TbLayoutSudoku.Location = new System.Drawing.Point(4, 4);
-            this.TbLayoutSudoku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TbLayoutSudoku.Margin = new System.Windows.Forms.Padding(4);
             this.TbLayoutSudoku.Name = "TbLayoutSudoku";
             this.TbLayoutSudoku.RowCount = 3;
             this.TbLayoutSudoku.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -102,34 +105,34 @@
             this.GbSolveOrHint.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GbSolveOrHint.Controls.Add(this.tableLayoutPanel1);
+            this.GbSolveOrHint.Controls.Add(this.tbLayoutActionMode);
             this.GbSolveOrHint.Location = new System.Drawing.Point(4, 756);
-            this.GbSolveOrHint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GbSolveOrHint.Margin = new System.Windows.Forms.Padding(4);
             this.GbSolveOrHint.Name = "GbSolveOrHint";
-            this.GbSolveOrHint.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GbSolveOrHint.Padding = new System.Windows.Forms.Padding(4);
             this.GbSolveOrHint.Size = new System.Drawing.Size(178, 180);
             this.GbSolveOrHint.TabIndex = 1;
             this.GbSolveOrHint.TabStop = false;
             this.GbSolveOrHint.Text = "操作模式";
             // 
-            // tableLayoutPanel1
+            // tbLayoutActionMode
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.RbEdit, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.RbSolve, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.RbHint, 0, 1);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 32);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(170, 144);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tbLayoutActionMode.ColumnCount = 1;
+            this.tbLayoutActionMode.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tbLayoutActionMode.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tbLayoutActionMode.Controls.Add(this.RbEdit, 0, 2);
+            this.tbLayoutActionMode.Controls.Add(this.RbSolve, 0, 0);
+            this.tbLayoutActionMode.Controls.Add(this.RbHint, 0, 1);
+            this.tbLayoutActionMode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbLayoutActionMode.Location = new System.Drawing.Point(4, 32);
+            this.tbLayoutActionMode.Margin = new System.Windows.Forms.Padding(4);
+            this.tbLayoutActionMode.Name = "tbLayoutActionMode";
+            this.tbLayoutActionMode.RowCount = 3;
+            this.tbLayoutActionMode.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbLayoutActionMode.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbLayoutActionMode.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tbLayoutActionMode.Size = new System.Drawing.Size(170, 144);
+            this.tbLayoutActionMode.TabIndex = 0;
             // 
             // RbEdit
             // 
@@ -138,7 +141,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RbEdit.AutoSize = true;
             this.RbEdit.Location = new System.Drawing.Point(4, 98);
-            this.RbEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RbEdit.Margin = new System.Windows.Forms.Padding(4);
             this.RbEdit.Name = "RbEdit";
             this.RbEdit.Size = new System.Drawing.Size(162, 42);
             this.RbEdit.TabIndex = 4;
@@ -154,7 +157,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RbSolve.AutoSize = true;
             this.RbSolve.Location = new System.Drawing.Point(4, 4);
-            this.RbSolve.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RbSolve.Margin = new System.Windows.Forms.Padding(4);
             this.RbSolve.Name = "RbSolve";
             this.RbSolve.Size = new System.Drawing.Size(162, 39);
             this.RbSolve.TabIndex = 2;
@@ -170,7 +173,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RbHint.AutoSize = true;
             this.RbHint.Location = new System.Drawing.Point(4, 51);
-            this.RbHint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RbHint.Margin = new System.Windows.Forms.Padding(4);
             this.RbHint.Name = "RbHint";
             this.RbHint.Size = new System.Drawing.Size(162, 39);
             this.RbHint.TabIndex = 3;
@@ -184,43 +187,18 @@
             this.TbForButtons.ColumnCount = 2;
             this.TbForButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TbForButtons.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TbForButtons.Controls.Add(this.ButtonOpenSudoku, 1, 0);
-            this.TbForButtons.Controls.Add(this.ButtonSaveSudoku, 1, 1);
             this.TbForButtons.Controls.Add(this.LabelMysteryRemains, 0, 0);
             this.TbForButtons.Controls.Add(this.LabelTimer, 0, 1);
+            this.TbForButtons.Controls.Add(this.tbLayoutButton, 1, 0);
             this.TbForButtons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TbForButtons.Location = new System.Drawing.Point(190, 756);
-            this.TbForButtons.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TbForButtons.Margin = new System.Windows.Forms.Padding(4);
             this.TbForButtons.Name = "TbForButtons";
             this.TbForButtons.RowCount = 2;
             this.TbForButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TbForButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TbForButtons.Size = new System.Drawing.Size(740, 180);
             this.TbForButtons.TabIndex = 2;
-            // 
-            // ButtonOpenSudoku
-            // 
-            this.ButtonOpenSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonOpenSudoku.Location = new System.Drawing.Point(596, 4);
-            this.ButtonOpenSudoku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ButtonOpenSudoku.Name = "ButtonOpenSudoku";
-            this.ButtonOpenSudoku.Size = new System.Drawing.Size(140, 82);
-            this.ButtonOpenSudoku.TabIndex = 0;
-            this.ButtonOpenSudoku.Text = "加载数独";
-            this.ButtonOpenSudoku.UseVisualStyleBackColor = true;
-            this.ButtonOpenSudoku.Click += new System.EventHandler(this.ButtonOpenSudoku_Click);
-            // 
-            // ButtonSaveSudoku
-            // 
-            this.ButtonSaveSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonSaveSudoku.Location = new System.Drawing.Point(596, 94);
-            this.ButtonSaveSudoku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ButtonSaveSudoku.Name = "ButtonSaveSudoku";
-            this.ButtonSaveSudoku.Size = new System.Drawing.Size(140, 82);
-            this.ButtonSaveSudoku.TabIndex = 1;
-            this.ButtonSaveSudoku.Text = "另存数独";
-            this.ButtonSaveSudoku.UseVisualStyleBackColor = true;
-            this.ButtonSaveSudoku.Click += new System.EventHandler(this.ButtonSaveSudoku_Click);
             // 
             // LabelMysteryRemains
             // 
@@ -252,13 +230,65 @@
             this.TickTimer.Interval = 1000;
             this.TickTimer.Tick += new System.EventHandler(this.TickTimer_Tick);
             // 
+            // tbLayoutButton
+            // 
+            this.tbLayoutButton.ColumnCount = 1;
+            this.tbLayoutButton.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tbLayoutButton.Controls.Add(this.ButtonSolveSudoku, 0, 2);
+            this.tbLayoutButton.Controls.Add(this.ButtonSaveSudoku, 0, 1);
+            this.tbLayoutButton.Controls.Add(this.ButtonOpenSudoku, 0, 0);
+            this.tbLayoutButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbLayoutButton.Location = new System.Drawing.Point(595, 3);
+            this.tbLayoutButton.Name = "tbLayoutButton";
+            this.tbLayoutButton.RowCount = 3;
+            this.TbForButtons.SetRowSpan(this.tbLayoutButton, 2);
+            this.tbLayoutButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33444F));
+            this.tbLayoutButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33445F));
+            this.tbLayoutButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33112F));
+            this.tbLayoutButton.Size = new System.Drawing.Size(142, 174);
+            this.tbLayoutButton.TabIndex = 4;
+            // 
+            // ButtonOpenSudoku
+            // 
+            this.ButtonOpenSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonOpenSudoku.Location = new System.Drawing.Point(4, 4);
+            this.ButtonOpenSudoku.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonOpenSudoku.Name = "ButtonOpenSudoku";
+            this.ButtonOpenSudoku.Size = new System.Drawing.Size(134, 50);
+            this.ButtonOpenSudoku.TabIndex = 2;
+            this.ButtonOpenSudoku.Text = "加载数独";
+            this.ButtonOpenSudoku.UseVisualStyleBackColor = true;
+            // 
+            // ButtonSaveSudoku
+            // 
+            this.ButtonSaveSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonSaveSudoku.Location = new System.Drawing.Point(4, 62);
+            this.ButtonSaveSudoku.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonSaveSudoku.Name = "ButtonSaveSudoku";
+            this.ButtonSaveSudoku.Size = new System.Drawing.Size(134, 50);
+            this.ButtonSaveSudoku.TabIndex = 4;
+            this.ButtonSaveSudoku.Text = "另存数独";
+            this.ButtonSaveSudoku.UseVisualStyleBackColor = true;
+            // 
+            // ButtonSolveSudoku
+            // 
+            this.ButtonSolveSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonSolveSudoku.Location = new System.Drawing.Point(4, 120);
+            this.ButtonSolveSudoku.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonSolveSudoku.Name = "ButtonSolveSudoku";
+            this.ButtonSolveSudoku.Size = new System.Drawing.Size(134, 50);
+            this.ButtonSolveSudoku.TabIndex = 5;
+            this.ButtonSolveSudoku.Text = "自动解题";
+            this.ButtonSolveSudoku.UseVisualStyleBackColor = true;
+            this.ButtonSolveSudoku.Click += new System.EventHandler(this.ButtonSolveSudoku_Click);
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 940);
             this.Controls.Add(this.TbLayoutMain);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "数独游戏 by255";
@@ -266,10 +296,11 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.TbLayoutMain.ResumeLayout(false);
             this.GbSolveOrHint.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tbLayoutActionMode.ResumeLayout(false);
+            this.tbLayoutActionMode.PerformLayout();
             this.TbForButtons.ResumeLayout(false);
             this.TbForButtons.PerformLayout();
+            this.tbLayoutButton.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -279,16 +310,18 @@
         private System.Windows.Forms.TableLayoutPanel TbLayoutMain;
         private System.Windows.Forms.TableLayoutPanel TbLayoutSudoku;
         private System.Windows.Forms.GroupBox GbSolveOrHint;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tbLayoutActionMode;
         private System.Windows.Forms.RadioButton RbEdit;
         private System.Windows.Forms.RadioButton RbSolve;
         private System.Windows.Forms.RadioButton RbHint;
         private System.Windows.Forms.TableLayoutPanel TbForButtons;
-        private System.Windows.Forms.Button ButtonOpenSudoku;
-        private System.Windows.Forms.Button ButtonSaveSudoku;
         private System.Windows.Forms.Label LabelMysteryRemains;
         private System.Windows.Forms.Label LabelTimer;
         private System.Windows.Forms.Timer TickTimer;
+        private System.Windows.Forms.TableLayoutPanel tbLayoutButton;
+        private System.Windows.Forms.Button ButtonSaveSudoku;
+        private System.Windows.Forms.Button ButtonOpenSudoku;
+        private System.Windows.Forms.Button ButtonSolveSudoku;
     }
 }
 

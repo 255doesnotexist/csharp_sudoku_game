@@ -219,6 +219,23 @@ namespace SudokuGame
             sudoku.SaveSudokuFile(SaveGamePath);
         }
 
+        private void ButtonSolveSudoku_Click(object sender, EventArgs e)
+        {
+            if (sudoku.Count < 9)
+            {
+                if (MessageBox.Show("您未填的格子数过多，继续自动解题可能使程序无响应。是否继续自动解题？", "警告", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning)
+                    != DialogResult.Yes)
+                {
+                    return;
+                }
+            }
+
+            sudoku = CommonUtils.SolveSudoku(sudoku);
+            UpdateSudokuButtons();
+            sudoku.SaveSudokuFile(SaveGamePath);
+        }
+
         private void TickTimer_Tick(object sender, EventArgs e)
         {
             EndTime = DateTime.Now;
