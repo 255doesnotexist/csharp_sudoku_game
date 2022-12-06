@@ -39,11 +39,11 @@
             this.TbForButtons = new System.Windows.Forms.TableLayoutPanel();
             this.LabelMysteryRemains = new System.Windows.Forms.Label();
             this.LabelTimer = new System.Windows.Forms.Label();
-            this.TickTimer = new System.Windows.Forms.Timer(this.components);
             this.tbLayoutButton = new System.Windows.Forms.TableLayoutPanel();
-            this.ButtonOpenSudoku = new System.Windows.Forms.Button();
-            this.ButtonSaveSudoku = new System.Windows.Forms.Button();
             this.ButtonSolveSudoku = new System.Windows.Forms.Button();
+            this.ButtonSaveSudoku = new System.Windows.Forms.Button();
+            this.ButtonOpenSudoku = new System.Windows.Forms.Button();
+            this.TickTimer = new System.Windows.Forms.Timer(this.components);
             this.TbLayoutMain.SuspendLayout();
             this.GbSolveOrHint.SuspendLayout();
             this.tbLayoutActionMode.SuspendLayout();
@@ -224,12 +224,6 @@
             this.LabelTimer.Text = "这里将显示您的解题时长。";
             this.LabelTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // TickTimer
-            // 
-            this.TickTimer.Enabled = true;
-            this.TickTimer.Interval = 1000;
-            this.TickTimer.Tick += new System.EventHandler(this.TickTimer_Tick);
-            // 
             // tbLayoutButton
             // 
             this.tbLayoutButton.ColumnCount = 1;
@@ -248,16 +242,17 @@
             this.tbLayoutButton.Size = new System.Drawing.Size(142, 174);
             this.tbLayoutButton.TabIndex = 4;
             // 
-            // ButtonOpenSudoku
+            // ButtonSolveSudoku
             // 
-            this.ButtonOpenSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonOpenSudoku.Location = new System.Drawing.Point(4, 4);
-            this.ButtonOpenSudoku.Margin = new System.Windows.Forms.Padding(4);
-            this.ButtonOpenSudoku.Name = "ButtonOpenSudoku";
-            this.ButtonOpenSudoku.Size = new System.Drawing.Size(134, 50);
-            this.ButtonOpenSudoku.TabIndex = 2;
-            this.ButtonOpenSudoku.Text = "加载数独";
-            this.ButtonOpenSudoku.UseVisualStyleBackColor = true;
+            this.ButtonSolveSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonSolveSudoku.Location = new System.Drawing.Point(4, 120);
+            this.ButtonSolveSudoku.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonSolveSudoku.Name = "ButtonSolveSudoku";
+            this.ButtonSolveSudoku.Size = new System.Drawing.Size(134, 50);
+            this.ButtonSolveSudoku.TabIndex = 5;
+            this.ButtonSolveSudoku.Text = "自动解题";
+            this.ButtonSolveSudoku.UseVisualStyleBackColor = true;
+            this.ButtonSolveSudoku.Click += new System.EventHandler(this.ButtonSolveSudoku_Click);
             // 
             // ButtonSaveSudoku
             // 
@@ -270,17 +265,22 @@
             this.ButtonSaveSudoku.Text = "另存数独";
             this.ButtonSaveSudoku.UseVisualStyleBackColor = true;
             // 
-            // ButtonSolveSudoku
+            // ButtonOpenSudoku
             // 
-            this.ButtonSolveSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonSolveSudoku.Location = new System.Drawing.Point(4, 120);
-            this.ButtonSolveSudoku.Margin = new System.Windows.Forms.Padding(4);
-            this.ButtonSolveSudoku.Name = "ButtonSolveSudoku";
-            this.ButtonSolveSudoku.Size = new System.Drawing.Size(134, 50);
-            this.ButtonSolveSudoku.TabIndex = 5;
-            this.ButtonSolveSudoku.Text = "自动解题";
-            this.ButtonSolveSudoku.UseVisualStyleBackColor = true;
-            this.ButtonSolveSudoku.Click += new System.EventHandler(this.ButtonSolveSudoku_Click);
+            this.ButtonOpenSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonOpenSudoku.Location = new System.Drawing.Point(4, 4);
+            this.ButtonOpenSudoku.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonOpenSudoku.Name = "ButtonOpenSudoku";
+            this.ButtonOpenSudoku.Size = new System.Drawing.Size(134, 50);
+            this.ButtonOpenSudoku.TabIndex = 2;
+            this.ButtonOpenSudoku.Text = "加载数独";
+            this.ButtonOpenSudoku.UseVisualStyleBackColor = true;
+            // 
+            // TickTimer
+            // 
+            this.TickTimer.Enabled = true;
+            this.TickTimer.Interval = 1000;
+            this.TickTimer.Tick += new System.EventHandler(this.TickTimer_Tick);
             // 
             // GameForm
             // 

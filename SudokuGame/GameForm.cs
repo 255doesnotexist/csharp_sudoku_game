@@ -127,6 +127,7 @@ namespace SudokuGame
                     TbLayouts[i, j] = new TableLayoutPanel();
                     TbLayoutSudoku.Controls.Add(TbLayouts[i, j], i - 1, j - 1);
                     TbLayouts[i, j].Dock = DockStyle.Fill;
+                    TbLayouts[i, j].CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
 
                     for (int t = 1; t <= 3; ++t)
                     {
