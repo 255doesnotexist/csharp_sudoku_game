@@ -95,6 +95,15 @@ namespace SudokuGame
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            /*// Performance Test
+            Sudoku sudoku = new Sudoku();
+            DateTime firstDateTime = DateTime.Now;
+            for (int i = 0; i < 1000; ++i)
+            {
+                sudoku = CommonUtils.GenerateSudoku(0);
+            }
+            TimeSpan deltaDateTime = DateTime.Now - firstDateTime;
+            MessageBox.Show(deltaDateTime.ToString());*/
             RefreshUsers();
         }
 
