@@ -66,7 +66,7 @@
             this.TbLayoutMain.RowCount = 2;
             this.TbLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TbLayoutMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TbLayoutMain.Size = new System.Drawing.Size(934, 940);
+            this.TbLayoutMain.Size = new System.Drawing.Size(934, 1113);
             this.TbLayoutMain.TabIndex = 0;
             // 
             // TbLayoutSudoku
@@ -97,7 +97,7 @@
             this.TbLayoutSudoku.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TbLayoutSudoku.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TbLayoutSudoku.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TbLayoutSudoku.Size = new System.Drawing.Size(926, 744);
+            this.TbLayoutSudoku.Size = new System.Drawing.Size(926, 882);
             this.TbLayoutSudoku.TabIndex = 0;
             // 
             // GbSolveOrHint
@@ -106,11 +106,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GbSolveOrHint.Controls.Add(this.tbLayoutActionMode);
-            this.GbSolveOrHint.Location = new System.Drawing.Point(4, 756);
+            this.GbSolveOrHint.Location = new System.Drawing.Point(4, 894);
             this.GbSolveOrHint.Margin = new System.Windows.Forms.Padding(4);
             this.GbSolveOrHint.Name = "GbSolveOrHint";
             this.GbSolveOrHint.Padding = new System.Windows.Forms.Padding(4);
-            this.GbSolveOrHint.Size = new System.Drawing.Size(178, 180);
+            this.GbSolveOrHint.Size = new System.Drawing.Size(178, 215);
             this.GbSolveOrHint.TabIndex = 1;
             this.GbSolveOrHint.TabStop = false;
             this.GbSolveOrHint.Text = "操作模式";
@@ -131,7 +131,7 @@
             this.tbLayoutActionMode.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tbLayoutActionMode.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tbLayoutActionMode.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tbLayoutActionMode.Size = new System.Drawing.Size(170, 144);
+            this.tbLayoutActionMode.Size = new System.Drawing.Size(170, 179);
             this.tbLayoutActionMode.TabIndex = 0;
             // 
             // RbEdit
@@ -140,10 +140,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RbEdit.AutoSize = true;
-            this.RbEdit.Location = new System.Drawing.Point(4, 98);
+            this.RbEdit.Location = new System.Drawing.Point(4, 122);
             this.RbEdit.Margin = new System.Windows.Forms.Padding(4);
             this.RbEdit.Name = "RbEdit";
-            this.RbEdit.Size = new System.Drawing.Size(162, 42);
+            this.RbEdit.Size = new System.Drawing.Size(162, 53);
             this.RbEdit.TabIndex = 4;
             this.RbEdit.TabStop = true;
             this.RbEdit.Text = "编辑模式";
@@ -159,7 +159,7 @@
             this.RbSolve.Location = new System.Drawing.Point(4, 4);
             this.RbSolve.Margin = new System.Windows.Forms.Padding(4);
             this.RbSolve.Name = "RbSolve";
-            this.RbSolve.Size = new System.Drawing.Size(162, 39);
+            this.RbSolve.Size = new System.Drawing.Size(162, 51);
             this.RbSolve.TabIndex = 2;
             this.RbSolve.TabStop = true;
             this.RbSolve.Text = "解题模式";
@@ -172,10 +172,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RbHint.AutoSize = true;
-            this.RbHint.Location = new System.Drawing.Point(4, 51);
+            this.RbHint.Location = new System.Drawing.Point(4, 63);
             this.RbHint.Margin = new System.Windows.Forms.Padding(4);
             this.RbHint.Name = "RbHint";
-            this.RbHint.Size = new System.Drawing.Size(162, 39);
+            this.RbHint.Size = new System.Drawing.Size(162, 51);
             this.RbHint.TabIndex = 3;
             this.RbHint.TabStop = true;
             this.RbHint.Text = "提示模式";
@@ -191,13 +191,13 @@
             this.TbForButtons.Controls.Add(this.LabelTimer, 0, 1);
             this.TbForButtons.Controls.Add(this.tbLayoutButton, 1, 0);
             this.TbForButtons.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TbForButtons.Location = new System.Drawing.Point(190, 756);
+            this.TbForButtons.Location = new System.Drawing.Point(190, 894);
             this.TbForButtons.Margin = new System.Windows.Forms.Padding(4);
             this.TbForButtons.Name = "TbForButtons";
             this.TbForButtons.RowCount = 2;
             this.TbForButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TbForButtons.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TbForButtons.Size = new System.Drawing.Size(740, 180);
+            this.TbForButtons.Size = new System.Drawing.Size(740, 215);
             this.TbForButtons.TabIndex = 2;
             // 
             // LabelMysteryRemains
@@ -207,7 +207,7 @@
             this.LabelMysteryRemains.Location = new System.Drawing.Point(4, 0);
             this.LabelMysteryRemains.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelMysteryRemains.Name = "LabelMysteryRemains";
-            this.LabelMysteryRemains.Size = new System.Drawing.Size(584, 90);
+            this.LabelMysteryRemains.Size = new System.Drawing.Size(584, 107);
             this.LabelMysteryRemains.TabIndex = 2;
             this.LabelMysteryRemains.Text = "这里将显示您还有几步可获得胜利。";
             this.LabelMysteryRemains.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,10 +216,10 @@
             // 
             this.LabelTimer.AutoSize = true;
             this.LabelTimer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelTimer.Location = new System.Drawing.Point(4, 90);
+            this.LabelTimer.Location = new System.Drawing.Point(4, 107);
             this.LabelTimer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelTimer.Name = "LabelTimer";
-            this.LabelTimer.Size = new System.Drawing.Size(584, 90);
+            this.LabelTimer.Size = new System.Drawing.Size(584, 108);
             this.LabelTimer.TabIndex = 3;
             this.LabelTimer.Text = "这里将显示您的解题时长。";
             this.LabelTimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,16 +239,16 @@
             this.tbLayoutButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33444F));
             this.tbLayoutButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33445F));
             this.tbLayoutButton.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33112F));
-            this.tbLayoutButton.Size = new System.Drawing.Size(142, 174);
+            this.tbLayoutButton.Size = new System.Drawing.Size(142, 209);
             this.tbLayoutButton.TabIndex = 4;
             // 
             // ButtonSolveSudoku
             // 
             this.ButtonSolveSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonSolveSudoku.Location = new System.Drawing.Point(4, 120);
+            this.ButtonSolveSudoku.Location = new System.Drawing.Point(4, 142);
             this.ButtonSolveSudoku.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonSolveSudoku.Name = "ButtonSolveSudoku";
-            this.ButtonSolveSudoku.Size = new System.Drawing.Size(134, 50);
+            this.ButtonSolveSudoku.Size = new System.Drawing.Size(134, 63);
             this.ButtonSolveSudoku.TabIndex = 5;
             this.ButtonSolveSudoku.Text = "自动解题";
             this.ButtonSolveSudoku.UseVisualStyleBackColor = true;
@@ -257,13 +257,14 @@
             // ButtonSaveSudoku
             // 
             this.ButtonSaveSudoku.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonSaveSudoku.Location = new System.Drawing.Point(4, 62);
+            this.ButtonSaveSudoku.Location = new System.Drawing.Point(4, 73);
             this.ButtonSaveSudoku.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonSaveSudoku.Name = "ButtonSaveSudoku";
-            this.ButtonSaveSudoku.Size = new System.Drawing.Size(134, 50);
+            this.ButtonSaveSudoku.Size = new System.Drawing.Size(134, 61);
             this.ButtonSaveSudoku.TabIndex = 4;
             this.ButtonSaveSudoku.Text = "另存数独";
             this.ButtonSaveSudoku.UseVisualStyleBackColor = true;
+            this.ButtonSaveSudoku.Click += new System.EventHandler(this.ButtonSaveSudoku_Click);
             // 
             // ButtonOpenSudoku
             // 
@@ -271,10 +272,11 @@
             this.ButtonOpenSudoku.Location = new System.Drawing.Point(4, 4);
             this.ButtonOpenSudoku.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonOpenSudoku.Name = "ButtonOpenSudoku";
-            this.ButtonOpenSudoku.Size = new System.Drawing.Size(134, 50);
+            this.ButtonOpenSudoku.Size = new System.Drawing.Size(134, 61);
             this.ButtonOpenSudoku.TabIndex = 2;
             this.ButtonOpenSudoku.Text = "加载数独";
             this.ButtonOpenSudoku.UseVisualStyleBackColor = true;
+            this.ButtonOpenSudoku.Click += new System.EventHandler(this.ButtonOpenSudoku_Click);
             // 
             // TickTimer
             // 
@@ -286,7 +288,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 940);
+            this.ClientSize = new System.Drawing.Size(934, 1113);
             this.Controls.Add(this.TbLayoutMain);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameForm";
