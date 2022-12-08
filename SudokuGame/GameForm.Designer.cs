@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
             this.TbLayoutMain = new System.Windows.Forms.TableLayoutPanel();
             this.TbLayoutSudoku = new System.Windows.Forms.TableLayoutPanel();
             this.GbSolveOrHint = new System.Windows.Forms.GroupBox();
@@ -290,6 +291,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 1113);
             this.Controls.Add(this.TbLayoutMain);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.TbLoginLayout = new System.Windows.Forms.TableLayoutPanel();
             this.ListUsers = new System.Windows.Forms.ListBox();
             this.FlLayout = new System.Windows.Forms.FlowLayoutPanel();
@@ -50,7 +51,7 @@
             this.TbLoginLayout.Controls.Add(this.FlLayout, 1, 0);
             this.TbLoginLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TbLoginLayout.Location = new System.Drawing.Point(0, 0);
-            this.TbLoginLayout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TbLoginLayout.Margin = new System.Windows.Forms.Padding(4);
             this.TbLoginLayout.Name = "TbLoginLayout";
             this.TbLoginLayout.RowCount = 1;
             this.TbLoginLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -63,7 +64,7 @@
             this.ListUsers.FormattingEnabled = true;
             this.ListUsers.ItemHeight = 24;
             this.ListUsers.Location = new System.Drawing.Point(4, 4);
-            this.ListUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ListUsers.Margin = new System.Windows.Forms.Padding(4);
             this.ListUsers.Name = "ListUsers";
             this.ListUsers.Size = new System.Drawing.Size(440, 448);
             this.ListUsers.TabIndex = 2;
@@ -78,7 +79,7 @@
             this.FlLayout.Controls.Add(this.RbEditMode);
             this.FlLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlLayout.Location = new System.Drawing.Point(452, 4);
-            this.FlLayout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FlLayout.Margin = new System.Windows.Forms.Padding(4);
             this.FlLayout.Name = "FlLayout";
             this.FlLayout.Size = new System.Drawing.Size(192, 448);
             this.FlLayout.TabIndex = 3;
@@ -87,7 +88,7 @@
             // 
             this.ButtonLogin.AutoSize = true;
             this.ButtonLogin.Location = new System.Drawing.Point(4, 4);
-            this.ButtonLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonLogin.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonLogin.Name = "ButtonLogin";
             this.ButtonLogin.Size = new System.Drawing.Size(184, 80);
             this.ButtonLogin.TabIndex = 0;
@@ -99,7 +100,7 @@
             // 
             this.ButtonRegister.AutoSize = true;
             this.ButtonRegister.Location = new System.Drawing.Point(4, 92);
-            this.ButtonRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonRegister.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonRegister.Name = "ButtonRegister";
             this.ButtonRegister.Size = new System.Drawing.Size(184, 80);
             this.ButtonRegister.TabIndex = 1;
@@ -112,7 +113,7 @@
             this.ButtonTopList.AutoSize = true;
             this.FlLayout.SetFlowBreak(this.ButtonTopList, true);
             this.ButtonTopList.Location = new System.Drawing.Point(4, 180);
-            this.ButtonTopList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonTopList.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonTopList.Name = "ButtonTopList";
             this.ButtonTopList.Size = new System.Drawing.Size(184, 80);
             this.ButtonTopList.TabIndex = 6;
@@ -125,7 +126,7 @@
             this.RbArcadeMode.AutoSize = true;
             this.RbArcadeMode.Checked = true;
             this.RbArcadeMode.Location = new System.Drawing.Point(6, 270);
-            this.RbArcadeMode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.RbArcadeMode.Margin = new System.Windows.Forms.Padding(6);
             this.RbArcadeMode.Name = "RbArcadeMode";
             this.RbArcadeMode.Size = new System.Drawing.Size(137, 28);
             this.RbArcadeMode.TabIndex = 3;
@@ -137,7 +138,7 @@
             // 
             this.RbCustomMode.AutoSize = true;
             this.RbCustomMode.Location = new System.Drawing.Point(6, 310);
-            this.RbCustomMode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.RbCustomMode.Margin = new System.Windows.Forms.Padding(6);
             this.RbCustomMode.Name = "RbCustomMode";
             this.RbCustomMode.Size = new System.Drawing.Size(161, 28);
             this.RbCustomMode.TabIndex = 4;
@@ -148,7 +149,7 @@
             // 
             this.RbEditMode.AutoSize = true;
             this.RbEditMode.Location = new System.Drawing.Point(6, 350);
-            this.RbEditMode.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.RbEditMode.Margin = new System.Windows.Forms.Padding(6);
             this.RbEditMode.Name = "RbEditMode";
             this.RbEditMode.Size = new System.Drawing.Size(137, 28);
             this.RbEditMode.TabIndex = 5;
@@ -161,7 +162,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 456);
             this.Controls.Add(this.TbLoginLayout);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LoginForm";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
